@@ -70,7 +70,7 @@ key = Base.check_number('Введите ключ для шифрования: ')
 
 text_lisi_in =[]
 
-data = open(r'C:\Users\SBB2-Ермилов Артём\YandexDisk-artyomermiloff\GeegBrains\Programming\Python\Homework\HW4\Caesars_cipher_r.txt', 'r', encoding='utf-8')
+data = open(r'Caesars_cipher_r.txt', 'r', encoding='utf-8')
 for da in data:
     text_lisi_in.append(da)
 data.close()
@@ -80,14 +80,14 @@ text_lisi_encoder=[]
 for text in text_lisi_in:
     text_lisi_encoder.append(encoder_caesar(text,key))
 
-data = open(r'C:\Users\SBB2-Ермилов Артём\YandexDisk-artyomermiloff\GeegBrains\Programming\Python\Homework\HW4\Caesars_cipher_w_encrypted.txt', 'w', encoding='utf-8')
+data = open(r'Caesars_cipher_w_encrypted.txt', 'w', encoding='utf-8')
 for da in text_lisi_encoder:
       data.write(da)
 data.close()
 
 text_lisi_in =[]
 
-data = open(r'C:\Users\SBB2-Ермилов Артём\YandexDisk-artyomermiloff\GeegBrains\Programming\Python\Homework\HW4\Caesars_cipher_w_encrypted.txt', 'r', encoding='utf-8')
+data = open(r'Caesars_cipher_w_encrypted.txt', 'r', encoding='utf-8')
 for da in data:
     text_lisi_in.append(da)
 data.close()
@@ -97,7 +97,7 @@ text_lisi_decoder=[]
 for text in text_lisi_in:
     text_lisi_decoder.append(decoder_caesar(text,key))
 
-data = open(r'C:\Users\SBB2-Ермилов Артём\YandexDisk-artyomermiloff\GeegBrains\Programming\Python\Homework\HW4\Caesars_cipher_w_decrypted.txt', 'w', encoding='utf-8')
+data = open(r'Caesars_cipher_w_decrypted.txt', 'w', encoding='utf-8')
 for da in text_lisi_decoder:
       data.write(da)
 data.close()

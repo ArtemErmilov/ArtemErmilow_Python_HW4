@@ -55,7 +55,7 @@ def RLE_decoder(list_:list):
 
 text_lisi_in =[]
 # Чтение теста из файла RLE_r.txt и запись его в список text_lisi_in
-data = open(r'C:\Users\SBB2-Ермилов Артём\YandexDisk-artyomermiloff\GeegBrains\Programming\Python\Homework\HW4\RLE_r.txt', 'r', encoding='utf-8')
+data = open(r'RLE_r.txt', 'r', encoding='utf-8')
 for da in data:
     text_lisi_in.append(da)
 data.close()
@@ -67,7 +67,7 @@ for text in text_lisi_in:
 
 
 # Запись сжатого текста из text_lisi_encoder в файл RLE_w_encoder.txt с разделением элементов через(,)
-data = open(r'C:\Users\SBB2-Ермилов Артём\YandexDisk-artyomermiloff\GeegBrains\Programming\Python\Homework\HW4\RLE_w_encoder.txt', 'w', encoding='utf-8')
+data = open(r'RLE_w_encoder.txt', 'w', encoding='utf-8')
 for dat in text_lisi_encoder:
     for da in dat:
         data.writelines(da)
@@ -76,7 +76,7 @@ data.close()
 
 # Чтение сжатого текста из файла RLE_w_encoder.txt, и запись его в text_lisi_in_encoder
 text_lisi_in_encoder=[]
-data = open(r'C:\Users\SBB2-Ермилов Артём\YandexDisk-artyomermiloff\GeegBrains\Programming\Python\Homework\HW4\RLE_w_encoder.txt', 'r', encoding='utf-8')
+data = open(r'RLE_w_encoder.txt', 'r', encoding='utf-8')
 for dat in data:
     text_lisi_in_encoder.append(dat)
 data.close()
@@ -89,7 +89,7 @@ for codtext in text_lisi_in_encoder:
     text_lisi_decoder.append(RLE_decoder(codtext.split(',')))
 text_lisi_decoder[0]
 # Запись распоковоанного текста в файл RLE_w_decoder.txt
-data = open(r'C:\Users\SBB2-Ермилов Артём\YandexDisk-artyomermiloff\GeegBrains\Programming\Python\Homework\HW4\RLE_w_decoder.txt', 'w', encoding='utf-8')
+data = open(r'RLE_w_decoder.txt', 'w', encoding='utf-8')
 for dat in text_lisi_decoder:
     data.writelines(f'{dat} \n')        
 data.close()
